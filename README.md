@@ -1,3 +1,7 @@
+<a href="https://codeclimate.com/github/BC-MAY-21-RN/kata-05-reservacion-de-vuelos-aug21-k05-t02/maintainability"><img src="https://api.codeclimate.com/v1/badges/ff6deaa4741a497c2ae3/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/BC-MAY-21-RN/kata-05-reservacion-de-vuelos-aug21-k05-t02/test_coverage"><img src="https://api.codeclimate.com/v1/badges/ff6deaa4741a497c2ae3/test_coverage" /></a>
+
 ![BrightCoders Logo](img/logo-bc.png)
 
 # Reservación de Vuelos
