@@ -24,7 +24,7 @@ export const FlexContainer = styled.View`
   height: ${({ h }) => h ?? "100%"};
   display: flex;
   align-items: ${({ aln }) => (aln ? "flex-start" : "center")};
-  /* justify-content: ${({ jst }) => (jst ? "flex-start" : "center")}; */
+  
   justify-content: space-around;
   flex-direction: ${({ dir }) => (dir ? "column" : "row")};
   margin-top: 10px;
@@ -38,9 +38,7 @@ export const CustomText = styled.Text`
 `;
 
 export const CustomInputStyle = styled.TextInput`
-  background-color: white;
-  font-size: ${({ fs }) => fs ?? "12px"};
-  font-weight: ${({ fw }) => fw ?? "normal"};
+  background-color: white; 
   height: 50px;
   width: 100%;
   padding: 10px;
