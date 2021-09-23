@@ -32,7 +32,7 @@ export const FlexContainer = styled.View`
 `;
 
 export const CustomText = styled.Text`
-  color: black;
+  color: ${({ clr }) => clr ?? "black"};
   font-size: ${({ fs }) => fs ?? "12px"};
   font-weight: ${({ fw }) => fw ?? "normal"};
 `;
