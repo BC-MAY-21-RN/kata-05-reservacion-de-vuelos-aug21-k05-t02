@@ -1,11 +1,8 @@
-import React from 'react'
-import { HomeScreen } from './src/components'
-
+import React from 'react';
+import {HomeScreen} from './src/components';
 
 const App = () => {
-  return (
-    <HomeScreen/>
-    )
-}
+  return <HomeScreen />;
+};
 
-export default App
+export default App;
