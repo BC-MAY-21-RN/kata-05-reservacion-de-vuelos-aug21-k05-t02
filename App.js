@@ -1,8 +1,10 @@
 import React from 'react';
-import {HomeScreen} from './src/components';
+import MyFlights from './src/screen/myFlights'
 
 const App = () => {
-  return <HomeScreen />;
+  return(
+    <MyFlights />
+  );
 };
 
 export default App;

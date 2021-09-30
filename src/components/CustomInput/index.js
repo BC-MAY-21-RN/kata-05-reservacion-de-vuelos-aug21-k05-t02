@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import colors from "../Colors";
+import { Colors } from "../colors";
 import { CustomInputStyle, CustomText, FlexContainer } from "../generals";
 
 const CustomInput = ({...props}) => {
@@ -8,9 +8,9 @@ const CustomInput = ({...props}) => {
 
   const getBorderColor = () => {
     if (focused) {
-      return colors.purple;
+      return Colors.blue_c;
     }else{
-        return colors.black;
+        return Colors.dark;
     }
   };
 
