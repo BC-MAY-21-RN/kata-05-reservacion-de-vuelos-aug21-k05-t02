@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import { Colors } from "../../components/Colors";
 import { MainContainer } from "../../components/generals";
-import { Colors } from "../../components/colors";
 
 export const ContainerFlights = styled(MainContainer)`
     margin-top: 6%;

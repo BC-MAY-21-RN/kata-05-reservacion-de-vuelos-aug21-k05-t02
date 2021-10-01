@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Colors } from "../colors";
+import { Colors } from "../Colors";
+
 
 export const Container = styled.View`
     display: flex;
