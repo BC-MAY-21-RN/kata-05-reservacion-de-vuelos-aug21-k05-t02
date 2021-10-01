@@ -1,9 +1,9 @@
 import React from 'react';
-import MyFlights from './src/screen/myFlights'
+import { Location } from './src/screen/location';
 
 const App = () => {
   return(
-    <MyFlights />
+    <Location />
   );
 };
 

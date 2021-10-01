@@ -17,16 +17,19 @@ export const Beg = styled.View`
     width: 50%;
     flex-direction: column;
 `;
+
 export const Title = styled.Text`
     font-size: 28px;
     font-weight: 700;
     color: ${Colors.dark};
 `;
+
 export const Country = styled.Text`
     font-size: 15px;
     font-weight: 300;
     color: ${Colors.dark};
 `;
+
 export const Border = styled.View`
     width: 100%;
     margin-top: 6px;
@@ -35,12 +38,14 @@ export const Border = styled.View`
     borderColor: ${Colors.gray};
     borderStyle: solid;
 `;
+
 export const Ams = styled.View`
     height: 100%;
     width: 50%;
     flex-direction: column;
     align-items: flex-end;
 `;
+
 export const LogoFlights = styled.View`
     position: absolute;
     width: 12%;

@@ -44,6 +44,7 @@ export const CustomInputStyle = styled.TextInput`
   padding: 10px;
   border: 1px solid;
 `;
+
 export const MainContainer = styled.SafeAreaView`
   display: flex;
   flex: 1;

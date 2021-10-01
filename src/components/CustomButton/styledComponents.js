@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ButtonContainer = styled.Pressable`
-  height: 50px;
+  height: 40px;
   width: 90%;
   display: flex;
   justify-content: center;
