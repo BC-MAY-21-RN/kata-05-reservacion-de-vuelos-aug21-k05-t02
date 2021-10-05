@@ -1,15 +1,14 @@
 import React from 'react';
-import {CustomText} from '../generals';
+import {ButtonText} from '..';
 import {ButtonContainer} from './styledComponents';
 
-const CustomButton = ({...props}) => {
+export const CustomButton = ({bg,onPress,text,disabled,...rest}) => {
+ 
   return (
-    <ButtonContainer bg={props.bg}>
-      <CustomText fs={props.fs} fw={props.fw} clr={props.clr}>
-        {props.text}
-      </CustomText>
+    <ButtonContainer disabled={disabled} onPress={onPress} bg={bg}>
+      <ButtonText  {...rest}>
+        {text}
+      </ButtonText>
     </ButtonContainer>
   );
 };
-
-export default CustomButton;

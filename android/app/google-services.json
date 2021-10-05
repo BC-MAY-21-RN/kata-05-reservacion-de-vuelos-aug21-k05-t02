@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "846077567519",
+    "project_id": "flight-reservations-t02",
+    "storage_bucket": "flight-reservations-t02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846077567519:android:f5dfc44979774a1b2a2b2a",
+        "android_client_info": {
+          "package_name": "com.flight_reservations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846077567519-lms5t9qj6ebt77r43cbapaq3c87t0m6a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flight_reservation",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "846077567519-82lfjer22p4f5l0si4juj3l2b7mkgkrt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjSKATnaPMUhJtd3MnSh9juE7Ml5DNrhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846077567519-82lfjer22p4f5l0si4juj3l2b7mkgkrt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
