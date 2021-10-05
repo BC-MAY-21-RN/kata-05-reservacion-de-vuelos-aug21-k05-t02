@@ -1,10 +1,10 @@
 import React from 'react';
-import MyFlights from './src/screen/myFlights'
+import {useGoogleServices} from './src/library/hooks';
+import Navigation from './src/navigators';
 
 const App = () => {
-  return(
-    <MyFlights />
-  );
+  useGoogleServices();
+  return <Navigation />;
 };
 
 export default App;
