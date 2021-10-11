@@ -9,13 +9,14 @@ import {
 } from '../../components';
 import {colors} from '../../library/constants';
 import {useState} from 'react';
-import { Button } from 'react-native';
 
-export const SelectDate = ({navigation}) => {
-  const nextScreenCast = type =>
-    navigation.navigate('SelectPassengers', {
-      type,
-    });
+export const SelectDate = ({route: {params}, navigation}) => {
+
+  const nextScreenCast = () => navigation.navigate('SelectPassengers', {
+    ...params,
+    startDate: dateSelected.startDate.toString(),
+    endDate: dateSelected.endDate.toString(),
+  });
 
   const [dateSelected, setDateSelected] = useState({
     startDate: null,
@@ -24,7 +25,11 @@ export const SelectDate = ({navigation}) => {
 
   return (
     <Layout>
-      <BookingHeader navigation={() => navigation.goBack()}/>
+      <BookingHeader
+        navigation={() => navigation.goBack()}
+        from={params.location}
+        to={params.destination}
+      />
       <FlexContainer aln h="60%" jc="flex-start" dir>
         <CustomText fs="30px" fw="bold">
           Select date
@@ -38,6 +43,7 @@ export const SelectDate = ({navigation}) => {
         bg={colors.blue_c}
         text="Next"
         onPress={() => nextScreenCast()}
+        disabled={!dateSelected.startDate || !dateSelected.endDate}
       />
     </Layout>
   );

@@ -17,7 +17,7 @@ export const FlightBooked = ({...props}) => {
             <CustomText fs="30px" fw="bold">{props.from}</CustomText>
           </FlexContainer>
           <FlexContainer h="60%" jc="flex-start">
-            <CustomText fs="16px" clr={colors.gray}>serbia</CustomText>
+            <CustomText fs="16px" clr={colors.gray}>{props.from}</CustomText>
           </FlexContainer>
         </FlexContainer>
         <FlexContainer w="33%">
@@ -28,16 +28,16 @@ export const FlightBooked = ({...props}) => {
             <CustomText fs="30px" fw="bold">{props.to}</CustomText>
           </FlexContainer>
           <FlexContainer h="60%" jc="flex-end">
-            <CustomText fs="16px" clr={colors.gray}>nethers</CustomText>
+            <CustomText fs="16px" clr={colors.gray}>{props.to}</CustomText>
           </FlexContainer>
         </FlexContainer>
       </PlacesContainer>
       <AdditionalDataContainer>
         <FlexContainer w="50%" jc="flex-start">
-          <CustomText fs="14px" fw="bold">september 3, 2020</CustomText>
+          <CustomText fs="14px" fw="bold">{props.date}</CustomText>
         </FlexContainer>
         <FlexContainer w="50%" jc="flex-end">
-          <CustomText fs="14px" fw="bold">2 Passengers</CustomText>
+          <CustomText fs="14px" fw="bold">{props.passengers}</CustomText>
         </FlexContainer>
       </AdditionalDataContainer>
     </BokingContainer>
