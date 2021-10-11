@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   BookingHeader,
-  BookingInput,
   CustomButton,
   CustomText,
   FlexContainer,
@@ -17,6 +16,7 @@ export const Received = ({route: {params}, navigation}) => {
         from={params.location}
         to={params.destination}
         startDate={params.startDate}
+        passengers={params.passengers + " passengers"}
       />
       <FlexContainer aln h="60%" jc="flex-start" dir>
         <CustomText fs="35px" fw="bold">

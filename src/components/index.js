@@ -1,3 +1,4 @@
+export { Counter } from './Counter';
 export { Calendar } from './Calendar';
 export { BookingInput } from './BookingInput';
 export { BackButton } from './BackButton';

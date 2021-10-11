@@ -8,7 +8,12 @@ export const BookingHeader = ({...props}) => {
         <BackButton navigation={props.navigation} />
       </FlexContainer>
       <FlexContainer h="75%">
-          <FlightBooked from={props.from} to={props.to} date={props.startDate} />
+        <FlightBooked
+          from={props.from}
+          to={props.to}
+          date={props.startDate}
+          passengers={props.passengers}
+        />
       </FlexContainer>
     </FlexContainer>
   );

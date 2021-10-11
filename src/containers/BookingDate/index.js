@@ -11,12 +11,12 @@ import {colors} from '../../library/constants';
 import {useState} from 'react';
 
 export const SelectDate = ({route: {params}, navigation}) => {
-
-  const nextScreenCast = () => navigation.navigate('SelectPassengers', {
-    ...params,
-    startDate: dateSelected.startDate.toString(),
-    endDate: dateSelected.endDate.toString(),
-  });
+  const nextScreenCast = () =>
+    navigation.navigate('SelectPassengers', {
+      ...params,
+      startDate: dateSelected.startDate.toString(),
+      endDate: dateSelected.endDate.toString(),
+    });
 
   const [dateSelected, setDateSelected] = useState({
     startDate: null,
