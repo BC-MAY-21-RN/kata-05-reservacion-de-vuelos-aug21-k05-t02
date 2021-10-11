@@ -10,14 +10,11 @@ import {
 import {colors} from '../../library/constants';
 
 export const SelectPassengers = ({route: {params}, navigation}) => {
-  console.log('====================================');
-  console.log('PARAMS', params);
-  console.log('====================================');
-
+  
   const nextScreenCast = () =>
     navigation.navigate('Received', {
       ...params,
-      
+
     });
 
   return (
