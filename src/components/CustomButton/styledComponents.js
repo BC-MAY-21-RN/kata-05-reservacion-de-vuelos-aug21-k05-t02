@@ -3,7 +3,7 @@ import { colors } from '../../library/constants';
 
 export const ButtonContainer = styled.Pressable`
   height: 50px;
-  width: 90%;
+  width: ${({w}) => w ?? '100%'};
   display: flex;
   justify-content: center;
   align-items: center;
