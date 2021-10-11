@@ -8,11 +8,13 @@ import {
   Layout,
 } from '../../components';
 import {colors} from '../../library/constants';
-
-export const Location = ({navigation}) => {
-  const nextScreenCast = type =>
+import {useInput} from '../../library/hooks';
+export const Location = ({route: {params}, navigation}) => {
+  const {value, onChangeText} = useInput('');
+  const nextScreenCast = () =>
     navigation.navigate('Destination', {
-      type,
+      ...params,
+      location: value,
     });
 
   return (
@@ -22,7 +24,11 @@ export const Location = ({navigation}) => {
         <CustomText fs="35px" fw="bold">
           Where are you now?
         </CustomText>
-        <BookingInput placeholder="Select location" />
+        <BookingInput
+          value={value}
+          onChangeText={onChangeText}
+          placeholder="Select location"
+        />
       </FlexContainer>
       <CustomButton
         bg={colors.blue_c}

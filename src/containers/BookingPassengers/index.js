@@ -9,15 +9,22 @@ import {
 } from '../../components';
 import {colors} from '../../library/constants';
 
-export const SelectPassengers = ({navigation}) => {
-  const nextScreenCast = type =>
+export const SelectPassengers = ({route: {params}, navigation}) => {
+  
+  const nextScreenCast = () =>
     navigation.navigate('Received', {
-      type,
+      ...params,
+
     });
 
   return (
     <Layout>
-      <BookingHeader navigation={() => navigation.goBack()} />
+      <BookingHeader 
+      navigation={() => navigation.goBack()} 
+      from={params.location}
+      to={params.destination}
+      startDate={params.startDate}
+      />
       <FlexContainer aln h="60%" jc="flex-start" dir>
         <CustomText fs="35px" fw="bold">
           How many passengers?
