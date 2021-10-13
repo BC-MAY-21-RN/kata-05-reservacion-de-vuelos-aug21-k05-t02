@@ -10,6 +10,16 @@ const options = {
   },
 };
 export const stackList = [
+  // {
+  //   component: SignIn,
+  //   name: 'SignIn',
+  //   options: {...options, headerShown: false},
+  // },
+  {
+    component: Login,
+    name: 'Login',
+    options: {...options, headerShown: false},
+  },
   {
     component: MyFlights,
     name: 'MyFlights',
@@ -45,9 +55,9 @@ export const stackList = [
     name: 'SignIn',
     options: {...options, headerShown: false},
   },
-  {
-    component: Login,
-    name: 'Login',
-    options: {...options, headerShown: false},
-  },
+  // {
+  //   component: Login,
+  //   name: 'Login',
+  //   options: {...options, headerShown: false},
+  // },
 ];
