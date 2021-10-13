@@ -5,7 +5,10 @@ import {colors} from '../../library/constants';
 import {flightListBooked} from '../../library/constants/temp';
 import {LayoutFlights, ListContainer, ButtonContainer} from './styledComponent';
 
-export const MyFlights = () => {
+export const MyFlights = ({navigation}) => {
+  const nextScreenCast = () =>
+    navigation.navigate('Location');
+
   return (
     <LayoutFlights>
       <ListContainer>
@@ -23,7 +26,10 @@ export const MyFlights = () => {
         />
       </ListContainer>
       <ButtonContainer>
-        <FloatingButton bg={colors.blue_c} />
+        <FloatingButton 
+        bg={colors.blue_c} 
+        onPress={() => nextScreenCast()}
+        />
       </ButtonContainer>
     </LayoutFlights>
   );

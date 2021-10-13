@@ -11,6 +11,11 @@ const options = {
 };
 export const stackList = [
   {
+    component: MyFlights,
+    name: 'MyFlights',
+    options: {...options, title: 'My Flights'},
+  },
+  {
     component: Location,
     name: 'Location',
     options: {...options, headerShown: false},
@@ -34,11 +39,6 @@ export const stackList = [
     component: Received,
     name: 'Received',
     options: {...options, headerShown: false},
-  },
-  {
-    component: MyFlights,
-    name: 'MyFlights',
-    options: {...options, title: 'My Flights'},
   },
   {
     component: SignIn,
