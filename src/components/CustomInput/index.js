@@ -36,6 +36,7 @@ export const CustomInput = ({
         onChangeText={onChangeText}
         value={value}
         name={name}
+        secureTextEntry={true}
       />
       {hasErrors && hasTouched ? (
         <CustomText mt="10px" clr={colors.red}>

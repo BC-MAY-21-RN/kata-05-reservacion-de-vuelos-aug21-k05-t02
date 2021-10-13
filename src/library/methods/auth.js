@@ -1,7 +1,7 @@
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
-export const register = async ({email, password, username}, navigation) => {
+export const register = async (email, password, username) => {
   return await auth()
     .createUserWithEmailAndPassword(email, password)
     .then(({user}) => {
@@ -15,7 +15,7 @@ export const register = async ({email, password, username}, navigation) => {
       }
     });
 };
-export const login = async ({email, password}, navigation) => {
+export const login = async (email, password, navigation) => {
   return await auth()
     .signInWithEmailAndPassword(email, password)
     .then(({user}) => {
