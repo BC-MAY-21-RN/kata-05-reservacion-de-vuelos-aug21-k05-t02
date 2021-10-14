@@ -67,6 +67,7 @@ export const Login = ({navigation}) => {
                 value={values.password}
                 hasErrors={errors.password}
                 hasTouched={touched.password}
+                secureTextEntry={true}
               />
               <CustomText clr={colors.gray}>
                 Use 8 or more characters with a mix of letters, numbers and
@@ -75,18 +76,20 @@ export const Login = ({navigation}) => {
             </FlexContainer>
             <FlexContainer h="45%" dir="col">
               <CustomButton
-                clr={colors.blue_c}
+                bg={colors.blue_c}
                 onPress={handleSubmit}
                 text="Login"
                 loading={loading}
+                disabled={errors.email}
               />
               <CustomText clr={colors.gray} fs="16px">
                 or
               </CustomText>
               <CustomButton
-                clr={colors.blue_c}
+                bg={colors.blue_c}
                 onPress={handleSubmit}
                 text="Login With Google"
+                disabled={errors.email}
               />
               <CustomText clr={colors.gray} fs="16px">
                 Already have an account? Login
