@@ -28,8 +28,17 @@ export const MyFlights = ({navigation}) => {
             key: documentSnapshot.id,
           });
         });
-        setVuelos(flights);
+        const fixedFlights = flights.map(flight => {
+          return {
+            begin: flight.location,
+            destiny: flight.destination,
+            date: flight.date,
+            passengers: flight.passengers
+          };
+        }); 
+        setVuelos(fixedFlights);
         console.log("3");
+        console.log(`flights: < ${JSON.stringify(vuelos)} >`);
       });
     return () => subscriber;
   }, [idUser]);
@@ -58,7 +67,7 @@ export const MyFlights = ({navigation}) => {
     <LayoutFlights>
       <ListContainer>
         <FlatList
-          data={flightListBooked}
+          data={vuelos}
           renderItem={({item}) => (
             <FlightBooked
               from={item.begin}

@@ -16,14 +16,14 @@ export const stackList = [
   //   options: {...options, headerShown: false},
   // },
   {
-    component: MyFlights,
-    name: 'MyFlights',
-    options: {...options, title: 'My Flights'},
-  },
-  {
     component: Login,
     name: 'Login',
     options: {...options, headerShown: false},
+  },
+  {
+    component: MyFlights,
+    name: 'MyFlights',
+    options: {...options, title: 'My Flights'},
   },
   // {
   //   component: MyFlights,
