@@ -20,6 +20,10 @@ export const MyFlights = ({navigation}) => {
       .collection('reservas')
       .doc(idUser)
       .onSnapshot(querySnapshot => {
+        if(!querySnapshot.exists) {
+          console.log("No tienes vuelos");
+          return;
+        }
         const flights = [];
         console.log("2");
         querySnapshot._data.flights.forEach(documentSnapshot => {
