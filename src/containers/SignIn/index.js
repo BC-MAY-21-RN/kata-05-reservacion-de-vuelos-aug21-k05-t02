@@ -83,6 +83,7 @@ export const SignIn = ({ navigation }) => {
                 value={values.password}
                 hasErrors={errors.password}
                 hasTouched={touched.password}
+                secureTextEntry={true}
               />
             </FlexContainer>
             <FlexContainer h="45%" dir="col">
@@ -93,6 +94,7 @@ export const SignIn = ({ navigation }) => {
                 text="Sign Up"
                 bg={colors.blue_c}
                 loading={loading}
+                disabled={errors.email}
               />
               <CustomText clr={colors.gray} fs="16px">
                 or
@@ -101,6 +103,7 @@ export const SignIn = ({ navigation }) => {
                 onPress={() => onGoogleButtonPress(navigation)}
                 text="Sign Up With Google"
                 bg={colors.blue_c}
+                disabled={errors.email}
               />
               <CustomText clr={colors.gray} fs="16px">
                 Don't you have an account? Sign In

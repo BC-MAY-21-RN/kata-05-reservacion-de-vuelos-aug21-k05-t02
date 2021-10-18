@@ -10,6 +10,7 @@ export const CustomInput = ({
   value,
   hasErrors,
   hasTouched,
+  secureTextEntry,
 }) => {
   const [focused, setFocused] = useState(false);
 
@@ -36,7 +37,7 @@ export const CustomInput = ({
         onChangeText={onChangeText}
         value={value}
         name={name}
-        // secureTextEntry={true}
+        secureTextEntry={secureTextEntry}
       />
       {hasErrors && hasTouched ? (
         <CustomText mt="10px" clr={colors.red}>
