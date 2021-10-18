@@ -41,7 +41,7 @@ export const Login = ({navigation}) => {
       )}
         <Formik
         initialValues={{
-          email: 'pol@gmail.com',
+          email: 'jose@gmail.com',
           password: '01Vladi*',
         }}
         validationSchema={logInSchema}

@@ -61,5 +61,12 @@ export const flightListBooked = [
         date: 'September 28, 2021',
         passengers: '2 passengers',
         id:'9'
+    },
+    {
+        begin: 'xd',
+        destiny: 'asd',
+        date: 'September 28, 2021',
+        passengers: '2 passengers',
+        id:'9'
     }
 ];

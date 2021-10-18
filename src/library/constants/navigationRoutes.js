@@ -25,6 +25,11 @@ export const stackList = [
     name: 'MyFlights',
     options: {...options, title: 'My Flights'},
   },
+  // {
+  //   component: MyFlights,
+  //   name: 'MyFlights',
+  //   options: {...options, title: 'My Flights'},
+  // },
   {
     component: Location,
     name: 'Location',
