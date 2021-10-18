@@ -6,7 +6,6 @@ import {flightListBooked} from '../../library/constants/temp';
 import {LayoutFlights, ListContainer, ButtonContainer} from './styledComponent';
 
 import auth from '@react-native-firebase/auth';
-//import { firebase, firestore } from '@react-native-firebase/firestore';
 import firestore from '@react-native-firebase/firestore';
 
 export const MyFlights = ({navigation}) => {
@@ -15,7 +14,6 @@ export const MyFlights = ({navigation}) => {
   const idUser = auth().currentUser.uid;
 
   useEffect(async() => {
-    console.log("1");
     const subscriber = await firestore()
       .collection('reservas')
       .doc(idUser)
@@ -25,7 +23,6 @@ export const MyFlights = ({navigation}) => {
           return;
         }
         const flights = [];
-        console.log("2");
         querySnapshot._data.flights.forEach(documentSnapshot => {
           flights.push({
             ...documentSnapshot,
@@ -41,29 +38,10 @@ export const MyFlights = ({navigation}) => {
           };
         }); 
         setVuelos(fixedFlights);
-        console.log("3");
-        console.log(`flights: < ${JSON.stringify(vuelos)} >`);
+        // console.log(`flights: < ${JSON.stringify(vuelos)} >`);
       });
     return () => subscriber;
   }, [idUser]);
-  
-  console.log(vuelos);
-  // console.log("Hola mundo");
-  // const LoadData = async() => {
-  //   try {
-  //     console.log('firebase:');
-  //     const user = await firestore().collection('reservas').doc('FrRKKy5wEWZJxMSBTpQnrQrzflx2').get();
-  //     //const user = await firestore().collection('reservas').get();
-  //     console.log(user);
-  //   } catch (e) {
-  //     console.log(e);
-  //     console.log("algo salio mal");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   LoadData();
-  // }, [])
 
   const nextScreenCast = () => navigation.navigate('Location');
 
