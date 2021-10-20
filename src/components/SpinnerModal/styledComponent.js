@@ -14,7 +14,7 @@ export const ModalContainer = styled.View`
 
 export const ModalBackground = styled.View`
   background-color: ${colors.darkLead};
-  border-radius: 10;
+  border-radius: 10px;
   height: 20%;
   width: 40%;
   flex-direction: column;
@@ -26,17 +26,17 @@ export const Spinner = styled.View`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20;
+  margin-bottom: 20px;
 `;
 export const ModalText = styled.Text`
   color: ${colors.blue_c};
   font-weight: bold;
-  font-size: 18;
-  letter-spacing: 1;
+  font-size: 18px;
+  letter-spacing: 1px;
 `;
 
 export const ModalIcon = styled.View`
-  font-size: 55;
+  font-size: 55px;
   color: ${colors.blue_c};
-  margin-bottom: 10;
+  margin-bottom: 10px;
 `;

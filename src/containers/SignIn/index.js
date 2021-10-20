@@ -22,7 +22,6 @@ export const SignIn = ({ navigation }) => {
 
   const handleSignIn = values => {
     const {email, password, username} = values;
-    createAditionalData();
     setStatus('loading');
     register(email, password, username)
       .then(() => {

@@ -13,11 +13,17 @@ import auth from '@react-native-firebase/auth';
 export const Received = ({route: {params}, navigation}) => {
 
   const addFlights = () => {
+
+
+    console.log("THIS IS THE USER", auth().currentUser.uid)
+
     firestore()
       .collection('reservas')
       .doc(auth().currentUser.uid)
       .get()
       .then(response => {
+
+      console.log("THIS IS THE RESPONSE", response.data())
         if (response.exists) {
           var data = response.data();
           data.flights.push({
