@@ -7,12 +7,35 @@ import {
   Layout,
 } from '../../components';
 import {colors} from '../../library/constants';
+import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
 
 export const Received = ({route: {params}, navigation}) => {
-  const nextScreenCast = () =>
-    navigation.navigate('MyFlights', {
-      ...params,
-    });
+
+  const addFlights = () => {
+    firestore()
+      .collection('reservas')
+      .doc(auth().currentUser.uid)
+      .get()
+      .then(response => {
+        if (response.exists) {
+          var data = response.data();
+          data.flights.push({
+            location: params.location,
+            destination: params.destination,
+            date: params.startDate,
+            passengers: params.passengers,
+          });
+
+          firestore()
+            .collection('reservas')
+            .doc(auth().currentUser.uid)
+            .set(data);
+        }
+      })
+      .catch(err => console.log('ERRORR AL AGREGAR VUELOS', err));
+    navigation.navigate('MyFlights');
+  };
   return (
     <Layout>
       <BookingHeader
@@ -30,7 +53,7 @@ export const Received = ({route: {params}, navigation}) => {
       <CustomButton
         bg={colors.blue_c}
         text="Save"
-        onPress={() => nextScreenCast()}
+        onPress={() => addFlights()}
       />
     </Layout>
   );

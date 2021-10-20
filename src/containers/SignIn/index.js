@@ -11,7 +11,6 @@ import {colors} from '../../library/constants';
 import {Formik} from 'formik';
 import {signUpSchema} from '../../library/constants/validationSchema';
 import {register} from '../../library/methods';
-//import {useNavigation} from '@react-navigation/native';
 import {onGoogleButtonPress} from '../../library/methods/auth';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { SpinnerModal } from '../../components/SpinnerModal';
@@ -37,7 +36,6 @@ export const SignIn = ({ navigation }) => {
       });
   };
 
-  //const navigation = useNavigation();
   return (
     <SafeAreaView>
       {status === 'loading' && <SpinnerModal status={'loading'} />}
@@ -124,6 +122,5 @@ export const SignIn = ({ navigation }) => {
         )}
       </Formik>
     </SafeAreaView>
-    
   );
 };
