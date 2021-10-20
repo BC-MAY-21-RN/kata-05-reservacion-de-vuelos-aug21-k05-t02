@@ -5,15 +5,12 @@ import firestore from '@react-native-firebase/firestore';
 export const register = async (email, password, username) => {
   return await auth()
     .createUserWithEmailAndPassword(email, password)
-    .then(({user}) => {
-      console.log("THIS IS THE USER", auth().currentUser)
-     
+    .then(({user}) => {     
       user
         .updateProfile({displayName: username})
         .then(() => createAditionalData());
     })
     .catch(error => {
-      console.log("THIS AN ERROR",error)
     
     });
 };
@@ -35,7 +32,6 @@ export const login = async (email, password, navigation) => {
 export const logout = async () => {
   return await auth()
     .signOut()
-    .then(() => console.log('User signed out!'));
 };
 
 export const onGoogleButtonPress = async navigation => {
