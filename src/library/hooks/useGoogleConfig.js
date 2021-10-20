@@ -26,7 +26,7 @@ export const useGoogleConfig = (navigation) => {
   return [singInWithGoogle];
 };
 
-const createAditionalData = () => {
+export const createAditionalData = () => {
   firestore()
     .collection('userData')
     .doc(auth().currentUser.uid)

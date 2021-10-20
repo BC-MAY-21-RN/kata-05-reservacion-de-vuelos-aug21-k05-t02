@@ -15,6 +15,7 @@ import {register} from '../../library/methods';
 import {onGoogleButtonPress} from '../../library/methods/auth';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { SpinnerModal } from '../../components/SpinnerModal';
+import { createAditionalData } from '../../library/hooks/useGoogleConfig';
 
 export const SignIn = ({ navigation }) => {
   const [loading, setLoading] = useState(false);
@@ -22,6 +23,7 @@ export const SignIn = ({ navigation }) => {
 
   const handleSignIn = values => {
     const {email, password, username} = values;
+    createAditionalData();
     setStatus('loading');
     register(email, password, username)
       .then(() => {
@@ -106,7 +108,16 @@ export const SignIn = ({ navigation }) => {
                 disabled={errors.email}
               />
               <CustomText clr={colors.gray} fs="16px">
-                Don't you have an account? Sign In
+                Don't you have an account? 
+                <CustomText 
+                  clr={colors.blue}
+                  fs="16px"
+                  onPress={()=>{
+                    navigation.navigate('Login');
+                  }}
+                >
+                  Login
+                </CustomText>
               </CustomText>
             </FlexContainer>
           </Layout>
