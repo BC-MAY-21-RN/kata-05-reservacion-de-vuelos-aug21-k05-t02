@@ -92,7 +92,16 @@ export const Login = ({navigation}) => {
                 disabled={errors.email}
               />
               <CustomText clr={colors.gray} fs="16px">
-                Already have an account? Login
+                Already have an account?
+                <CustomText 
+                  clr={colors.blue}
+                  fs="16px"
+                  onPress={()=>{
+                    navigation.navigate('SignIn');
+                  }}
+                >
+                  SignUp
+                </CustomText>
               </CustomText>
             </FlexContainer>
           </Layout>
@@ -102,3 +111,6 @@ export const Login = ({navigation}) => {
     
   );
 };
+
+
+
