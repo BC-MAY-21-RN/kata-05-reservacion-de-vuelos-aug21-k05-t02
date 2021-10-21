@@ -37,7 +37,7 @@ export const FlightBooked = ({...props}) => {
           <CustomText fs="14px" fw="bold">{props.date}</CustomText>
         </FlexContainer>
         <FlexContainer w="50%" jc="flex-end">
-          <CustomText fs="14px" fw="bold">{props.passengers}</CustomText>
+          <CustomText fs="14px" fw="bold">Passengers: {props.passengers}</CustomText>
         </FlexContainer>
       </AdditionalDataContainer>
     </BokingContainer>

@@ -1,18 +1,17 @@
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import firestore from '@react-native-firebase/firestore';
 
 export const register = async (email, password, username) => {
   return await auth()
     .createUserWithEmailAndPassword(email, password)
-    .then(({user}) => {
+    .then(({user}) => {     
       user
         .updateProfile({displayName: username})
-        .then(() => resolve('User created & signed in'), createAditionalData());
+        .then(() => createAditionalData());
     })
     .catch(error => {
-      if (error.code === 'auth/email-already-in-use') {
-        reject('That email address is already in use!');
-      }
+    
     });
 };
 export const login = async (email, password, navigation) => {
@@ -33,7 +32,6 @@ export const login = async (email, password, navigation) => {
 export const logout = async () => {
   return await auth()
     .signOut()
-    .then(() => console.log('User signed out!'));
 };
 
 export const onGoogleButtonPress = async navigation => {
@@ -51,12 +49,12 @@ export const onGoogleButtonPress = async navigation => {
 
 const createAditionalData = () => {
   firestore()
-    .collection('bookings')
+    .collection('reservas')
     .doc(auth().currentUser.uid)
     .get()
     .then(response => {
       if (!response.exists) {
-        firestore().collection('bookings').doc(auth().currentUser.uid).set({
+        firestore().collection('reservas').doc(auth().currentUser.uid).set({
           flights: [],
         });
       }

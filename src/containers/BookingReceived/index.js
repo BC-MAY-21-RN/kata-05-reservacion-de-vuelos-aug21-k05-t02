@@ -13,6 +13,7 @@ import auth from '@react-native-firebase/auth';
 export const Received = ({route: {params}, navigation}) => {
 
   const addFlights = () => {
+
     firestore()
       .collection('reservas')
       .doc(auth().currentUser.uid)
@@ -33,7 +34,6 @@ export const Received = ({route: {params}, navigation}) => {
             .set(data);
         }
       })
-      .catch(err => console.log('ERRORR AL AGREGAR VUELOS', err));
     navigation.navigate('MyFlights');
   };
   return (
